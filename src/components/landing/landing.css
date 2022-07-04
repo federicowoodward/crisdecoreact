@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2? family=Jacques+Francois+Shadow&display=swap');
+
+.containerLanding {
+    width: 100%;
+}
+.textButton {
+    height: calc(100vh - 60px);
+}
+.text {
+    background-color: var(--color-g);
+    padding: 2vh 0 0.5vh 0;
+    border-bottom: 1px solid black;
+}
+.text h1 {
+    width: 100%;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 4em;
+    color: var(--color-black)
+}
+.text p {
+    text-align: center;
+    font: 1.5em sans-serif;
+    margin: 1vh 20vh;
+    color: var(--color-blue);
+    font-family: 'Jacques Francois Shadow', cursive;
+    border-radius: 20px;
+}
+.cardsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 5vh;
+}
+.cardsContainer .card {
+    width: 200px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 15px 15px 17px 17px;
+}
+.card {
+    text-align: center;
+    cursor: pointer;
+}
+.card h4 {
+    padding-top: 9px;
+    border-radius: 0 0 15px 15px;
+    background-color: var(--color-oS);
+}
+.card p {
+    display: none;
+}
+.card:hover {
+    margin-top: 12px;
+    transition-duration: 0.4s;
+}
+.card:hover h4 {
+    color: var(--color-blue);
+    width: 200px;
+    height: 107px;
+    margin-top: -100px;
+    position: absolute;
+}
+.card:hover p {
+    display: block;
+    color: var(--color-blue);
+}
+.card img {
+    margin: 1vh 1vh 0 1vh;
+}
+.armChairImg img {
+    width: 100%;
+    position: absolute;
+    top: -90px;
+    z-index: -10;
+}
+.textButton button {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    background-color: var(--color-oS);
+    border: 0;
+}
+.textButton button span {
+    font-size: 50px;
+}
+.textButton button:hover {
+    -webkit-box-shadow: inset 0px 0px 30px 1px rgba(0, 0, 0, 0.252);
+    -moz-box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.5);
+    box-shadow: inset 0px 0px 30px 1px rgba(0,0,0,0.5);
+    font-size: 58px;
+}
+.textButton button:hover span{
+    font-size: 58px;
+}

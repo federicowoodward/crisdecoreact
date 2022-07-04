@@ -1,10 +1,21 @@
+import Landing from './components/landing/landing.js';
 import './App.css';
+import NavBar from './components/navBar/navBar.js';
 
 function App() {
   return (
-    <div>
-      <h1>Inicio</h1>
-    </div>
+    <>
+        <nav>
+            <NavBar/>
+        </nav>
+        <main>
+            <Landing/>
+
+        </main>
+        <footer>
+            {/* <Footer/> */}
+        </footer>
+    </>
   );
 }
 

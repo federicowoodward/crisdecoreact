@@ -1,0 +1,10 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    --color-blue: #00478F;
+    --color-o: #FF5D00;
+    --color-oS: #ff5e00a9;
+    --color-black: #2A231F;
+    --color-g: #D8E1E7;
+}
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap');

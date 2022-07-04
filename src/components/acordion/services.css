@@ -1,0 +1,13 @@
+.services {
+    margin: 2em 5vh;
+    padding: 0.5em;
+    background-color: var(--color-g); 
+    border-radius: 15px;
+}
+.services h1 {
+    color: var(--color-blue);
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 1px;
+    padding: 0.3em;
+    margin-left: 15px;
+}
