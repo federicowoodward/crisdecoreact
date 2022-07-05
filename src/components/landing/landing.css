@@ -82,6 +82,7 @@
     height: 50px;
     background-color: var(--color-oS);
     border: 0;
+    cursor: pointer;
 }
 .textButton button span {
     font-size: 50px;
@@ -93,5 +94,23 @@
     font-size: 58px;
 }
 .textButton button:hover span{
-    font-size: 58px;
+    transform: scale(1.4,1.4);
+}
+.filling {
+    background-color: var(--color-black);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.fillingPhoto {
+    background-image: url(https://www.irca.fr/wp-content/uploads/2021/01/01-1080x675.jpg);
+    /* img origin: https://www.irca.fr/comment-rendre-son-interieur-plus-chaleureux/  */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 30em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

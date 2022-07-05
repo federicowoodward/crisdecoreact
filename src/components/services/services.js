@@ -17,7 +17,7 @@ export default function Acordion() {
             <h1>Estos son nuestros servicios ofrecidos:</h1>
             <div className="accordion">
                 {data.map((item, i) => (
-                <div className="accordionItem">
+                <div className="accordionItem" key={item.question}>
                     <div className="accordionTitle" onClick={() => toggle(i)}>
                         <h2>{item.question}</h2>
                         <span>{selected === i ? "-" : "+" }</span>
@@ -36,7 +36,7 @@ export default function Acordion() {
 }
 
 const data = [
-    {
+    {   
         question: 'Pregunta 1',
         answer:
             'Occaecat occaecat consectetur consequat eiusmod adipisicing in ex deserunt minim ut officia pariatur do nisi magna est sit nulla. Non labore dolor aliqua qui do ut occaecat consequat deserunt irure duis pariatur fugiat adipisicing. Mollit eiusmod tempor enim proident amet laboris excepteur.'
@@ -55,5 +55,15 @@ const data = [
         question: 'Pregunta 4',
         answer:
             'Occaecat occaecat consectetur consequat eiusmod adipisicing in ex deserunt minim ut officia pariatur do nisi magna est sit nulla. Non labore dolor aliqua qui do ut occaecat consequat deserunt irure duis pariatur fugiat adipisicing. Mollit eiusmod tempor enim proident amet laboris excepteur.'
-    }
+    },
+    {   
+        question: 'Pregunta 5',
+        answer:
+            'Occaecat occaecat consectetur consequat eiusmod adipisicing in ex deserunt minim ut officia pariatur do nisi magna est sit nulla. Non labore dolor aliqua qui do ut occaecat consequat deserunt irure duis pariatur fugiat adipisicing. Mollit eiusmod tempor enim proident amet laboris excepteur.'
+    },
+    {   
+        question: 'Pregunta 6',
+        answer:
+            'Occaecat occaecat consectetur consequat eiusmod adipisicing in ex deserunt minim ut officia pariatur do nisi magna est sit nulla. Non labore dolor aliqua qui do ut occaecat consequat deserunt irure duis pariatur fugiat adipisicing. Mollit eiusmod tempor enim proident amet laboris excepteur.'
+    },
 ]

@@ -15,11 +15,12 @@
     margin-left: 12px;
 }
 .accordionTitle h2 {
-    color: var(--color-blue);
+    color: var(--color-black);
     font-family: 'Lato', sans-serif;
     letter-spacing: 2px;
 }
 .accordionTitle span {
+    color: var(--color-black);
     font-size: 2.5em;
     margin-right: 12px;
 }
@@ -27,11 +28,13 @@
     max-height: 0;
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0,1,0,1);
+    color: var(--color-black);
 }
 .accordionContent.show {
     height: auto;
     max-height: 9999px;
     transition: all 0.5s cubic-bezier(1,0,1,0);
+    color: var(--color-black);
 }
 .accordionContent p,
 .accordionContent.show p {

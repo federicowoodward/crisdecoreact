@@ -1,8 +1,14 @@
 import LandingImg from "../../assets/startArmchair.svg";
 import CardImg1 from "../../assets/sillascubiertas.svg";
-import Acordion from "../acordion/services.js";
+import Contact from "../contact/contact.js";
+import Acordion from "../services/services.js";
 import "./landing.css";
+import { collection, getDocs, getFirestore} from "firebase/firestore";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 export default function Landing() {
+    const [picsList, setPicsList] = useState([]);
+    const {id} = useParams();
 
     function goDown() {
         window.scrollTo({
@@ -11,6 +17,18 @@ export default function Landing() {
         })
     }
 
+    useEffect(() => {
+        const db = getFirestore()
+        let queryCollection =   collection(db,"fotos");
+        getDocs(queryCollection)
+        .then ( resp => {
+            if (resp.size === 0) {
+                console.log("no results!");
+            } else {
+                setPicsList( resp.docs.map(item => ({id: item.id, ...item.data()})))}})
+        .catch(err => console.log(err))
+    },[id])
+    console.log(picsList)
     return (
         <div>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -59,10 +77,12 @@ export default function Landing() {
                         <img src={LandingImg} alt="" />
                     </div>
             </div>
-            <div>
+            <div className="filling">
                 <Acordion />
             </div>
-     
+            <div className="fillingPhoto">
+                <Contact />
+            </div>
         </div>
     )
 }
