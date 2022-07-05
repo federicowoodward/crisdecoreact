@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 .accordionItem {
-    margin: 1vh;
+    margin: 0.5vh;
     background-color: var(--color-o);
 }
 .accordionTitle {
@@ -35,6 +35,7 @@
     max-height: 9999px;
     transition: all 0.5s cubic-bezier(1,0,1,0);
     color: var(--color-black);
+    cursor: pointer;
 }
 .accordionContent p,
 .accordionContent.show p {

@@ -97,4 +97,14 @@
     }
    }
    
-   
+  .fillingPhoto {
+  background-image: url(https://www.irca.fr/wp-content/uploads/2021/01/01-1080x675.jpg);
+  /* img origin: https://www.irca.fr/comment-rendre-son-interieur-plus-chaleureux/  */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 33em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

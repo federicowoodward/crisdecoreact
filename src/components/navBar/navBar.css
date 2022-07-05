@@ -20,16 +20,17 @@
   float: left;
   position: relative;
 }
-
 .navBarUl li a {
   text-decoration: none;
+}
+.navBarUl li p {
   color: var(--color-o);
   font-family: 'Cinzel', serif;
   font-size: 18px;
   letter-spacing: 2px;
 }
 
-.navBarUl li a::before {
+.navBarUl li p::before {
   display: block;
   content: "";
   background: var(--color-oS);
@@ -40,13 +41,19 @@
   transition: width 0.8;
 }
 
-.navBarUl li a:hover::before {
+.navBarUl li p:hover::before {
   width: 100%;
 }
 
 .logo {
   padding: 10px 0 0 30px;
+  transform: scale(1.1,1.1);
+}
+.logo:hover {
+  transition-duration: 0.2s;
+  transform: scale(1.2,1.2);
 }
 .cartLogo{
   margin: 12px 20px 0 0;
+  cursor: pointer;
 }

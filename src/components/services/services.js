@@ -13,25 +13,26 @@ export default function Acordion() {
     }
 
     return (
-        <div className="services">
-            <h1>Estos son nuestros servicios ofrecidos:</h1>
-            <div className="accordion">
-                {data.map((item, i) => (
-                <div className="accordionItem" key={item.question}>
-                    <div className="accordionTitle" onClick={() => toggle(i)}>
-                        <h2>{item.question}</h2>
-                        <span>{selected === i ? "-" : "+" }</span>
-                    </div>
-                    <div className={
+        <div className="filling">
+            <div className="services">
+                <h1>Estos son nuestros servicios ofrecidos:</h1>
+                <div className="accordion">
+                    {data.map((item, i) => (
+                        <div className="accordionItem" key={item.question}>
+                        <div className="accordionTitle" onClick={() => toggle(i)}>
+                            <h2>{item.question}</h2>
+                            <span>{selected === i ? "-" : "+" }</span>
+                        </div>
+                        <div className={
                             selected === i ? "accordionContent show" : "accordionContent" 
-                        }>
-                        <p>{item.answer}</p>
+                        } onClick={() => toggle(i)}>
+                            <p>{item.answer}</p>
+                        </div>
                     </div>
+                    ))}
                 </div>
-                ))}
             </div>
         </div>
-      
     );
 }
 

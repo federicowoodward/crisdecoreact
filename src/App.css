@@ -9,5 +9,5 @@
     --color-g: #D8E1E7;
 }
 main {
-    min-height: 100vh;
+    min-height: calc(100vh - 60px);
 }

@@ -1,8 +1,6 @@
 .footer {
     margin-top: auto;
-    background: var(--color-g);
-    border-top: 3px solid;
-    border-color: #0a1412;
+    background: #3a2213;
     width: 100%;
     height: 6em;
 } 
@@ -15,7 +13,11 @@
     grid-template-areas:
         "column1 columns2";
 }
-
+.footer li,
+.footer p,
+.footer h4 {
+    color: var(--color-g)
+}
 .column1 {
     justify-self: center;
     align-self: stretch;
@@ -57,7 +59,7 @@
     text-align: center;
     text-decoration: underline;
     color: black;
-    background-color: rgba(0, 0, 0, 0.29);
+    background-color: var(--color-oS);
 }
 @media (max-width: 426px) {
     .footer {
