@@ -41,36 +41,40 @@ export default function Landing() {
                             el mundo decotextil.
                         </p>
                     </div>
-                <div className="buttonsCards">
-                    <button>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span>Atrapuertas</span>
-                    </button>
-                    <button>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span>Atrapuertas</span>
-                    </button>
-                    <button>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span>Atrapuertas</span>
-                    </button>
-                    <button>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span>Atrapuertas</span>
-                    </button>
-                </div>
+                    <div className="armChairImgFilling"></div>
+                    <div className="buttonsCards">
+                        <button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>Atrapuertas</span>
+                        </button>
+                        <button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>Atrapuertas</span>
+                        </button>
+                        <button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>Atrapuertas</span>
+                        </button>
+                        <button>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span>Atrapuertas</span>
+                        </button>
+                    </div>
+                    <div className="landingExtraText">
+                        <p> Tenemos varios productos y servicios para ofrecer!</p>
+                    </div>
                     <button className="goDownButton" onClick={goDown}>
                         <span className="material-symbols-outlined">
                         expand_more
