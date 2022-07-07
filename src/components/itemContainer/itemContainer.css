@@ -1,0 +1,103 @@
+.itemList {
+    background-color: var(--color-black);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;        
+    justify-content: center;
+    padding: 5vh;
+}
+.item {
+    height: 310px;
+    width: 270px;
+    background-color: var(--color-g);
+    margin: 0.8vh;
+    border-radius: 0.7em;
+    position: relative;
+    text-align: center;
+    padding: 2vh 0 0 0;
+}
+.item img {
+    height: 9em;
+}
+.itemName {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.itemAlt {
+    text-align: start;
+    margin: 0.5vh 2.5vh;
+}
+.item span {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+.itemStock {
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: var(--color-blue);
+}
+
+/* From uiverse.io by @satyamchaudharydev */
+.item span button {
+    --primary-color: var(--color-blue);
+    --secondary-color: #fff;
+    --hover-color: var(--color-o);
+    --arrow-width: 15px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+  }
+  
+  .item span button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .item span button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+  }
+  
+  .item span button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+  }
+  
+  .item span button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .item span button:hover .arrow {
+    background: var(--secondary-color);
+  }
+  
+  .item span button:hover .arrow:before {
+    right: 0;
+  }

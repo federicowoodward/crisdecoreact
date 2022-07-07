@@ -6,7 +6,11 @@ import ItemList from "./itemList.js";
 export default function ItemListContainer () {
     const [itemList, setItemList] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [searchValue, setSearchValue] = useState("");
+    const [searchStatus, setSearchStatus] = useState(false);
     const {id} = useParams();
+    let search = "";
+
     useEffect(() => {
         const db = getFirestore()
         let queryCollection =   collection(db,"productos");
@@ -19,10 +23,33 @@ export default function ItemListContainer () {
         .catch(err => console.log(err))
         .finally(setLoading(true));
     },[id])
-    return (
-        <div>
-            <p>Hi wordld!</p>
-            {loading ? <ItemList itemList={itemList} id={id}/> : <p>cargando...</p>}
-        </div>
-    );
+
+    function generateSearch(e) {
+        search = e.target.value;
+    }
+
+    function startSearch() {
+        setSearchValue(search);
+        setSearchStatus(true);
+    }
+    if (!loading) {
+        return (
+            <div>
+                <p>Cargando...</p>
+            </div>
+            );
+    }
+    else if (loading) {
+            return (
+                <div>
+                <input type="text" name="category" onChange={(e) => generateSearch(e)}/>
+                <button onClick={startSearch}>Buscar</button>
+                {
+                    searchStatus ? <ItemList itemList={itemList} id={id} search={searchValue}/> :
+                    <ItemList itemList={itemList} id={id} />
+                }
+            </div>
+        );
+    }
 }
+

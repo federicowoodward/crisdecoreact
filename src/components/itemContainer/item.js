@@ -1,8 +1,20 @@
+import "./itemContainer.css";
 export default function Item(item) {
     return (
-        <div>
-            <img src={item.item.imgUrl} alt={item.item.alt} height="200px" />
-            <p>{item.item.name}</p>
+        <div className="item">
+            <img src={item.item.imgUrl} alt={item.item.alt} />
+            <p className="itemName">{item.item.name}</p>
+            <p className="itemAlt">{item.item.alt}</p>
+            <span>
+                <p className="itemStock">Stock: {item.item.stock}</p>
+                <button>
+                    Comprar
+                    <div className="arrow-wrapper">
+                        <div className="arrow"></div>
+
+                    </div>
+                </button>
+            </span>
         </div>
     );
 }
