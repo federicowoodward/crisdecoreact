@@ -1,0 +1,39 @@
+.itemDelete img {
+    width: 100px;
+}
+
+.itemDelete button {
+    margin: auto 10px auto auto;
+    height: 35px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border: 3px solid #d90429;
+    background: #d90429;
+}
+.itemDelete button:hover {
+    background: #fff;
+    color: #d90429
+}
+.itemDelete {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid black;
+    margin: 15px;
+    height: auto;
+}
+.itemDelete p {
+    min-height: 20px;
+    margin: auto 5px;
+    padding: 2px;
+    border: 0.5px solid black;
+}
+.itemDelete .deleted {
+    background: #fff;
+    color: #d90429
+}

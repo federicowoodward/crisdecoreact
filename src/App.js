@@ -7,6 +7,9 @@ import Contact from './components/contact/contact.js';
 import Services from './components/services/services.js';
 import ItemListContainer from './components/itemContainer/itemListContainer.js';
 import ItemDetailContainer from './components/detailContainer/itemDetailContainer.js';
+import Admin from './components/admin/admin.js';
+import Upload from './components/admin/upload/imgUpload.js';
+import Deleter from './components/admin/deleter/itemDeleterContainer.js';
 function App() {
   return (
     <BrowserRouter>
@@ -21,6 +24,9 @@ function App() {
                     <Route path="/services" element={<Services/>} />
                     <Route path="/products" element={<ItemListContainer/>} />
                     <Route path="/products/:id" element={<ItemDetailContainer/>} />
+                    <Route path="/admin" element={<Admin/>} />
+                    <Route path="/upload" element={<Upload/>} />
+                    <Route path="/deleter" element={<Deleter/>} />
                     <Route path="/*" element = { <Navigate to="/" replace /> } />
             </Routes>
                 </main>

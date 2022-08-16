@@ -1,0 +1,10 @@
+.itemDeleter {
+    columns: auto 2;
+    text-align: center;
+    margin-top: 10px;
+}
+@media (max-width: 769px) {
+    .itemDeleter {
+        columns: auto 1;
+    }
+}

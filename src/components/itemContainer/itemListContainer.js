@@ -1,6 +1,7 @@
 import { collection, getDocs, getFirestore} from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "../loader/loader.js";
 import ItemList from "./itemList.js";
 
 export default function ItemListContainer () {
@@ -40,10 +41,11 @@ export default function ItemListContainer () {
                             <li><p className={selected === "autos" ? "selected" : ""} onClick={(e) => generateSearch("autos")}>Autos</p></li>
                             <li><p className={selected === "sillones" ? "selected" : ""} onClick={(e) => generateSearch("sillones")}>Sillones</p></li>
                             <li><p className={selected === "sillas" ? "selected" : ""} onClick={(e) => generateSearch("sillas")}>Sillas</p></li>
+                            <li><p className={selected === "atrapapuertas" ? "selected" : ""} onClick={(e) => generateSearch("atrapapuertas")}>Atrapapuertas</p></li>
                         </ul>
                     </div> 
                     {
-                        !loading ? <p className="reload">Cargando...</p> : searchStatus ? <ItemList itemList={itemList} id={id} search={searchValue}/> :
+                        !loading ? <div className="loaderSetUp">< Loader /></div>  : searchStatus ? <ItemList itemList={itemList} id={id} search={searchValue}/> :
                           <ItemList itemList={itemList} id={id} />
                     }
                 </div>

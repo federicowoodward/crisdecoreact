@@ -1,0 +1,79 @@
+.itemUpload {
+    display: flex;
+    margin-top: 2vh;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.itemUpload .form {
+    background-color: var(--color-g);
+    border: 1px black solid;
+    border-radius: 10px;
+}
+.preview strong {
+    display: block;
+    background-color: var(--color-g);
+    text-align: center;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    padding: 2px 0;
+    border-radius: 8px;
+}
+.itemUpload form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 2vh 20%;
+}
+.itemUpload form input {
+    text-align: center;
+    font-size: 1em;
+    margin-top: 1vh;
+}
+.itemUpload button,
+.itemUploadTrue button{
+    margin: 3vh auto;
+    min-width: 130px;
+    height: 40px;
+    color: #fff;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background: #343a40;
+    box-shadow: 0 5px #212529;
+  }
+  .itemUpload button:hover {
+    box-shadow: 0 3px #212529;
+    top: 1px;
+  }
+  .itemUpload button:active {
+    box-shadow: 0 0 #212529;
+    top: 5px;
+  }
+  .itemUploadTrue button:hover {
+    box-shadow: 0 3px #212529;
+    top: 1px;
+  }
+  .itemUploadTrue button:active {
+    box-shadow: 0 0 #212529;
+    top: 5px;
+  }
+#delete {
+    background: rgb(250, 57, 57);
+    box-shadow: 0 5px rgb(137, 32, 32);
+  }
+#delete:hover {
+    box-shadow: 0 3px rgb(137, 32, 32);
+  }
+#delete:active {
+    box-shadow: 0 0 rgb(137, 32, 32);
+  }
+.imgUpload {
+    height: 200px;
+}

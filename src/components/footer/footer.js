@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./footer.css";
 export default function Footer() {
     return (
@@ -7,9 +7,9 @@ export default function Footer() {
                 <div className="column1">
                     <ul>
                         <li>
-                        {/* <Link to="/login"> */}
+                        <Link to="/admin">
                         Administracion
-                        {/* </Link> */}
+                        </Link>
                         </li>
                         <li>
                         {/* <Link to="/contact"> */}
