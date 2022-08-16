@@ -5,7 +5,7 @@ export default function Admin() {
         <div className="admin">
             <button><Link to={"/upload"}>  Subir item</Link></button>
             <button><Link to={"/deleter"}>  Borrar item</Link></button>
-            <button>Subir item</button>
+            <button><Link to={"/categoriesManager"}>  Administrar categorias</Link></button>
         </div>
     );
 }

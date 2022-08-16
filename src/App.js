@@ -10,6 +10,7 @@ import ItemDetailContainer from './components/detailContainer/itemDetailContaine
 import Admin from './components/admin/admin.js';
 import Upload from './components/admin/upload/imgUpload.js';
 import Deleter from './components/admin/deleter/itemDeleterContainer.js';
+import CategoriesManager from './components/admin/categories/categoriesManager.js';
 function App() {
   return (
     <BrowserRouter>
@@ -27,6 +28,7 @@ function App() {
                     <Route path="/admin" element={<Admin/>} />
                     <Route path="/upload" element={<Upload/>} />
                     <Route path="/deleter" element={<Deleter/>} />
+                    <Route path="/categoriesManager" element={<CategoriesManager/>} />
                     <Route path="/*" element = { <Navigate to="/" replace /> } />
             </Routes>
                 </main>

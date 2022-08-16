@@ -1,0 +1,12 @@
+.categoriesManager {
+    background-color: var(--color-g);
+    text-align: center;
+}
+.categoriesManager p {
+    width: 100px;
+    margin: 10px auto;
+}
+.categoriesManager button {
+    width: 100px;
+    margin: 10px auto;
+}
