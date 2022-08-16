@@ -1,54 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
   .itemContainer {
   min-height: 100vh;
   position: relative;
-  }
-  .itemContainer .inputsGroup {
-  position: absolute;
-  top: 10px;
-  left: 40px;
   display: flex;
+  flex-direction: row;
   }
-  .itemContainer .inputsGroup p {
-  font-size: 25px;
-  color: #fff;
-  margin-right: 20px;
-  }
-  /* From uiverse.io by @alexruix */
-  .itemContainer .group {
-  display: flex;
-  line-height: 24px;
-  align-items: center;
-  position: relative;
-  max-width: 190px;
-  }
-
-  .itemContainer .input {
-  height: 20px;
-  line-height: 28px;
-  padding: 0 1rem;
-  width: 100%;
-  padding-left: 2.5rem;
-  border: 2px solid transparent;
-  border-radius: 8px;
-  outline: none;
-  background-color: #D9E8D8;
-  color: #0d0c22;
-  box-shadow: 0 0 5px #C1D9BF, 0 0 0 10px #f5f5f5eb;
-  transition: .3s ease;
-  }
-
-  .itemContainer .input::placeholder {
-  color: #777;
-  }
-
-  .itemContainer .icon {
-  position: absolute;
-  left: 1rem;
-  fill: #777;
-  width: 1rem;
-  height: 1rem;
-  }
-
+  
 
   .itemList {
   display: flex;
@@ -56,7 +13,8 @@
   flex-wrap: wrap;        
   justify-content: center;
   padding: 5vh;
-  padding-top: 10vh;
+  min-width: calc(100% - 40vh);
+  min-height: 100vh;
   }
   .item {
   height: 310px;
@@ -161,147 +119,41 @@
   right: 0;
   }
 
-
-/* From uiverse.io by @bandirevanth */
-/* Switch starts here */
-.rocker {
-  display: inline-block;
-  position: relative;
-  /*
-  SIZE OF SWITCH
-  ==============
-  All sizes are in em - therefore
-  changing the font-size here
-  will change the size of the switch.
-  See .rocker-small below as example.
-  */
-  font-size: 2em;
-  font-weight: bold;
-  text-align: center;
-  text-transform: uppercase;
-  color: #888;
-  width: 7em;
-  height: 4em;
-  overflow: hidden;
-  border-bottom: 0.5em solid #eee;
+.categoriesContainer {
+  background-color: var(--color-g);
+  padding: 2vh 5vh 0 4vh;
+  border-right: 1.5px solid black;
 }
-
-.rocker-small {
-  font-size: 0.75em;
- /* Sizes the switch */
-  margin: 1em;
+.categoriesContainer li {
+  list-style: none;
 }
-
-.rocker::before {
-  content: "";
-  position: absolute;
-  top: 0.5em;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #999;
-  border: 0.5em solid #eee;
-  border-bottom: 0;
-}
-
-.rocker input {
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-
-.switch-left,
-.switch-right {
+.categoriesContainer p {
+  text-decoration: none;
+  color: var(--color-black);
+  font-family: 'Lato', sans-serif;
+  font-size: 22px;
   cursor: pointer;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 2.5em;
-  width: 3em;
-  transition: 0.2s;
-  user-select: none;
+  padding: 5px 2px;
+  margin-top: 2px;
+  text-align: center;
 }
-
-.switch-left {
-  height: 2.4em;
-  width: 2.75em;
-  left: 0.85em;
-  bottom: 0.4em;
-  background-color: #ddd;
-  transform: rotate(15deg) skewX(15deg);
+.categoriesContainer .selected {
+  background-color: rgba(0, 0, 0, 0.278);
 }
-
-.switch-right {
-  right: 0.5em;
-  bottom: 0;
-  background-color: #bd5757;
-  color: #fff;
+.categoriesContainer h1 {
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  text-decoration: underline;
 }
-
-.switch-left::before,
-.switch-right::before {
-  content: "";
-  position: absolute;
-  width: 0.4em;
-  height: 2.45em;
-  bottom: -0.45em;
-  background-color: #ccc;
-  transform: skewY(-65deg);
+.reload {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.484);
 }
-
-.switch-left::before {
-  left: -0.4em;
-}
-
-.switch-right::before {
-  right: -0.375em;
-  background-color: transparent;
-  transform: skewY(65deg);
-}
-
-input:checked + .switch-left {
-  background-color: #0084d0;
-  color: #fff;
-  bottom: 0px;
-  left: 0.5em;
-  height: 2.5em;
-  width: 3em;
-  transform: rotate(0deg) skewX(0deg);
-}
-
-input:checked + .switch-left::before {
-  background-color: transparent;
-  width: 3.0833em;
-}
-
-input:checked + .switch-left + .switch-right {
-  background-color: #ddd;
-  color: #888;
-  bottom: 0.4em;
-  right: 0.8em;
-  height: 2.4em;
-  width: 2.75em;
-  transform: rotate(-15deg) skewX(-15deg);
-}
-
-input:checked + .switch-left + .switch-right::before {
-  background-color: #ccc;
-}
-
-/* Keyboard Users */
-input:focus + .switch-left {
-  color: #333;
-}
-
-input:checked:focus + .switch-left {
-  color: #fff;
-}
-
-input:focus + .switch-left + .switch-right {
-  color: #fff;
-}
-
-input:checked:focus + .switch-left + .switch-right {
-  color: #333;
+.misMatch {
+  background-color: var(--color-g);
+  margin: auto;
+  padding: 5vh;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  border-radius: 15px;
 }

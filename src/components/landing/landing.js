@@ -1,4 +1,4 @@
-import LandingImg from "../../assets/startArmchair.svg";
+// import LandingImg from "../../assets/startArmchair.svg";
 import Contact from "../contact/contact.js";
 import Acordion from "../services/services.js";
 import "./landing.css";
@@ -32,7 +32,7 @@ export default function Landing() {
         <div>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
             <div className="containerLanding">
-                <div className="textButton">
+                <div className="landingText">
                     <div className="text">
                         <h1> Quienes somos? </h1>
                         <p>
@@ -41,49 +41,21 @@ export default function Landing() {
                             el mundo decotextil.
                         </p>
                     </div>
-                    <div className="armChairImgFilling"></div>
-                    <div className="buttonsCards">
-                        <button>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span>Atrapuertas</span>
-                        </button>
-                        <button>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span>Atrapuertas</span>
-                        </button>
-                        <button>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span>Atrapuertas</span>
-                        </button>
-                        <button>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                            <span>Atrapuertas</span>
-                        </button>
+                    {/* <div className="armChairImgFilling"></div> */}
+                    <div className="sliderContainer">
+                        <div className="slider position">
+                        </div>
                     </div>
-                    <div className="landingExtraText">
-                        <p> Tenemos varios productos y servicios para ofrecer!</p>
-                    </div>
+      
                     <button className="goDownButton" onClick={goDown}>
                         <span className="material-symbols-outlined">
                         expand_more
                         </span>
                     </button>
                 </div>
-                <div className="armChairImg">
+                {/* <div className="armChairImg">
                     <img src={LandingImg} alt="" />
-                </div>
+                </div> */}
             </div>
             <div className="filling">
                 <Acordion />
