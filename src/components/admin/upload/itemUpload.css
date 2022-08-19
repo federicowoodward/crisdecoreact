@@ -1,6 +1,5 @@
 .itemUpload {
     display: flex;
-    margin-top: 2vh;
     flex-direction: row;
     justify-content: space-around;
 }
@@ -32,9 +31,9 @@
 }
 .itemUpload button,
 .itemUploadTrue button{
-    margin: 3vh auto;
-    min-width: 130px;
-    height: 40px;
+    margin: 15vh auto;
+    min-width: 180px;
+    height: 65px;
     color: #fff;
     padding: 5px 10px;
     font-weight: bold;

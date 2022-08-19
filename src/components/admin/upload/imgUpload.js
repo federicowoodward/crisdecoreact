@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import ItemUpload from "./itemUpload";
 import "./imgUpload.css";
 export default function Upload(){
-    const [uploadState, setUpState] = useState(false);
+    const [uploadState, setUpState] = useState(true);
     const [uploadImg, setImg] = useState();
     const [progress, setProgress] = useState(0);
 
@@ -17,8 +17,9 @@ export default function Upload(){
         const task = uploadBytesResumable(storageRef, file);
         
         task.on('state_changed', snapshot => {
-            let percentage = ( snapshot.bytesTransferred / snapshot.totalBytes * 100)
-            percentage < 100 ? setProgress(percentage) : setUpState(true)
+            let percentage = Math.round( snapshot.bytesTransferred / snapshot.totalBytes * 100)
+            setProgress(percentage) 
+            percentage < 100 && setTimeout(() => {setUpState(true)},2500)
         }, err => { 
             console.log(err.message) 
         }, () => { 
@@ -37,12 +38,14 @@ export default function Upload(){
     } else if (uploadState === false) {
 
         return (
-            <div className="selectContainer">
-                <p className="select"> Seleccionar archivo:</p>
-                <br/>
-                <input className="selectInput" type="file" onChange={(e) => handleUpload(e)}/> 
-                <div className="progressBar">
-                    <p>%{progress}</p>
+            <div className="fillingPhoto">
+                <div className="selectContainer">
+                    <p className="select"> Seleccionar archivo:</p>
+                    <input className={progress === 100 ? 'selected' : "selectInput"} type="file" onChange={(e) => handleUpload(e)}/> 
+                    <div className="progressBar">
+                        <p>{progress} %</p>
+                        <progress min="0" max="100" value={progress}></progress>
+                    </div>
                 </div>
             </div>
         )

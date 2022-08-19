@@ -7,7 +7,7 @@ import Item from "../../itemContainer/item";
 export default function ItemUpload({img, redirect}) {
     const [item, setItem] = useState({})
     const [itemPreview, setItemPreview] = useState({})
-    const [upload, setUploadDone] = useState(false)
+    const [upload, setUploadDone] = useState(true)
     let itemToUpload = {};
 
     itemPreview.imgUrl = img;
@@ -43,9 +43,6 @@ export default function ItemUpload({img, redirect}) {
         const storage = getStorage();
         const desertRef = ref(storage, `${img}`);
         deleteObject(desertRef)
-            .then(() => {
-                    alert("imagen borrada")
-            } )
             .catch((error) => {
                 alert(error);
             })
@@ -54,15 +51,15 @@ export default function ItemUpload({img, redirect}) {
 
       if (upload === true)  {
           return( 
-            <div className="itemUpload true">
-                <Link to="/upload">
-                    <button> Subir otra foto</button>
-                </Link>
-                <Link to="/">
-                    <button> Volver al inicio</button>
-                </Link>
-              </div>
-                );
+                <div className="itemUpload fillingPhoto">
+                    <Link to="/upload" onClick={() => redirect()}>
+                        <button> Subir otra foto</button>
+                    </Link>
+                    <Link to="/admin">
+                        <button> Volver al inicio</button>
+                    </Link>
+                </div>
+            );
     } else if (upload === false) {
         return(
             <div className="fillingPhoto">

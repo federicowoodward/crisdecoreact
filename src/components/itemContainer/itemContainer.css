@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
   .itemContainer {
   min-height: 100vh;
-  position: relative;
-  display: flex;
-  flex-direction: row;
   }
+  .itemContainer {  display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "categoriesContainer itemList";
+  }
+  .categoriesContainer { grid-area: categoriesContainer; }
+  .itemList { grid-area: itemList; }
+  
   .itemList {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;        
   justify-content: center;
-  padding: 5vh;
+  padding: 3.8vh;
   min-width: calc(100% - 40vh);
   min-height: 100vh;
   }
@@ -74,6 +82,10 @@
   align-items: center;
   gap: 0.6em;
   font-weight: bold;
+  text-align: none;
+  }
+  .item span a {
+    text-decoration: none;
   }
 
   .item span button .arrow-wrapper {
@@ -116,12 +128,14 @@
   .item span button:hover .arrow:before {
   right: 0;
   }
+/* end button */
 
 .categoriesContainer {
   background-color: var(--color-g);
   padding: 2vh 5vh 0 4vh;
   border-right: 1.5px solid black;
 }
+
 .categoriesContainer li {
   list-style: none;
 }
@@ -130,18 +144,34 @@
   color: var(--color-black);
   font-family: 'Lato', sans-serif;
   font-size: 22px;
+  padding: 7px 4px 7px 4px;
   cursor: pointer;
-  padding: 5px 2px;
   margin-top: 2px;
   text-align: center;
+  transition-duration: 0.5s;
+}
+.categoriesContainer p:hover {
+  transition-duration: 0.5s;
+  background-color: rgba(85, 85, 85, 0.105);
+}
+.categoriesContainer .line {
+  width: 100%;
+  height: 1px;
+  background-color: rgb(55, 55, 55);
+  transition-duration: 1s;
+}
+.categoriesContainer div {
+  height: 1px;
 }
 .categoriesContainer .selected {
-  background-color: rgba(0, 0, 0, 0.278);
+  transition-duration: 1s;
+  background-color: rgba(85, 85, 85, 0.105);
 }
 .categoriesContainer h1 {
   font-family: 'Lato', sans-serif;
   font-size: 25px;
   text-decoration: underline;
+  padding: 10px 2px;
 }
 .misMatch {
   background-color: var(--color-g);

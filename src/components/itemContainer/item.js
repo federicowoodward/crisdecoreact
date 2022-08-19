@@ -6,6 +6,7 @@ export default function Item(item) {
             <img src={item.item.imgUrl} alt={item.item.alt} />
             <p className="itemName">{item.item.name}</p>
             { !item.item.alt ? <p className="itemAlt">No hay descripcion disponible</p> : <p className="itemAlt">{item.item.alt}</p>}
+            <p>Categoria: {item.item.category}</p>
             <span>
                 <p className="itemStock">Stock: {item.item.stock}</p>
                 <Link to={`/products/${item.item.id}`}>

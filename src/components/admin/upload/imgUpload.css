@@ -1,0 +1,32 @@
+.selectContainer {
+    background-color: var(--color-g);
+    margin: 50px 250px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.selectContainer .select {
+    font: 2em 'Cinzel';
+    letter-spacing: -2px;
+    padding: 10px;
+}
+.selectContainer .selectInput {
+    background-color:  red;
+}
+.selectContainer .selected {
+    background-color:  blue;
+}
+.selectContainer .progressBar {
+    padding: 15px 0;
+}
+.selectContainer .progressBar p {
+    text-align: center;
+    font: 1.5em sans-serif;
+}
+.selectContainer .progressBar progress {
+    width: 200px;
+    height: 30px;
+}

@@ -13,7 +13,7 @@ export default function Item({ item, deleter }){
       <div className="itemDelete">
         {
             !item.imgUrl ? <p>Imagen no encontrada</p> :    
-            <img src={item.imgUrl} alt={item.client} title=""/>
+            <img src={item.imgUrl} alt={item.client}/>
         }
         {
             !item.name ? <div><strong>Nombre:</strong><p>sin nombre</p></div> :    

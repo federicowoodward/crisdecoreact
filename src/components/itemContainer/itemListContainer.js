@@ -23,40 +23,42 @@ export default function ItemListContainer () {
             } else {
                 setItemList( resp.docs.map(item => ({id: item.id, ...item.data()})))}})
         .catch(err => console.log(err))
-        .finally(setTimeout(() =>setLoading(true),3000) );
+        .finally(setTimeout(() =>setLoading(true),1500) );
 
         const queryCollectionOfCategories = collection(db, 'categories');
         getDocs(queryCollectionOfCategories)
         .then ( resp => setList( resp.docs.map(item => ({id : item.id , ...item.data()}))))
         .catch(err => console.log(err))
-        .finally( setTimeout(() => sessionStorage.setItem("firstReload", false), 1000))
     },[id])
 
-    function generateSearch(e) {
+    function highLightCategory(e) {
         setSearchValue(e);
         setSearchStatus(true);
-        
         setSelected(e)
     }
-            return (
-                <div className="itemContainer fillingPhoto">
-                    <div className="categoriesContainer">
-                        <h1>Categorias:</h1>
-                        <ul>
-                            <li><p className={selected === "" ? "selected" : ""} onClick={(e) => generateSearch("")}>Todos</p></li>
-                            {categoryList.map(category => {
-                                let lowerCase = category.name.toLowerCase();
-                                return (
-                                <li><p className={selected === `${lowerCase}` ? "selected" : ""} onClick={(e) => generateSearch(`${lowerCase}`)}>{category.name}</p></li>
-                                );
-                            })}
-                        </ul>
-                    </div> 
+    return (
+        <div className="itemContainer fillingPhoto">
+            <div className="categoriesContainer">
+                <h1>Categorias:</h1>
+                <ul>
+                    <li><p className={selected === "" ? "selected" : ""} onClick={(e) => highLightCategory("")}>Todos</p><div className={selected === "" ? "line" : ""}></div></li>
                     {
-                        !loading ? <div className="loaderSetUp">< Loader /></div>  : searchStatus ? <ItemList itemList={itemList} id={id} search={searchValue}/> :
-                          <ItemList itemList={itemList} id={id} />
+                    categoryList.map(category => {
+                        let lowerCase = category.name.toLowerCase();
+                            return (
+                                <li key={category.id}><p className={selected === `${lowerCase}` ? "selected" : ""} onClick={(e) => highLightCategory(`${lowerCase}`)}>{category.name}</p><div className={selected === `${lowerCase}` ? "line" : ""}></div></li>
+                                );
+                            })
                     }
-                </div>
-        );
+                </ul>
+            </div> 
+            <div className="itemList">
+            {
+                !loading ? <div className="loaderSetUp">< Loader /></div>  : searchStatus ? <ItemList itemList={itemList} id={id} search={searchValue}/> :
+                <ItemList itemList={itemList} id={id} />
+            }
+            </div>
+        </div>
+    );
     }
 
