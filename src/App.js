@@ -19,18 +19,18 @@ function App() {
                 <NavBar/>
             </nav>
                 <main>
-            <Routes>
-                    <Route path="/" element={<Landing/>} />
-                    <Route path="/contact" element={<Contact/>} />
-                    <Route path="/services" element={<Services/>} />
-                    <Route path="/products" element={<ItemListContainer/>} />
-                    <Route path="/products/:id" element={<ItemDetailContainer/>} />
-                    <Route path="/admin" element={<Admin/>} />
-                    <Route path="/upload" element={<Upload/>} />
-                    <Route path="/deleter" element={<Deleter/>} />
-                    <Route path="/categoriesManager" element={<CategoriesManager/>} />
-                    <Route path="/*" element = { <Navigate to="/" replace /> } />
-            </Routes>
+                    <Routes>
+                            <Route path="/" element={<Landing/>} />
+                            <Route path="/contact/:showLocation" element={<Contact/>} />
+                            <Route path="/services" element={<Services/>} />
+                            <Route path="/products" element={<ItemListContainer/>} />
+                            <Route path="/products/:id" element={<ItemDetailContainer/>} />
+                            <Route path="/admin" element={<Admin/>} />
+                            <Route path="/upload" element={<Upload/>} />
+                            <Route path="/deleter" element={<Deleter/>} />
+                            <Route path="/categoriesManager" element={<CategoriesManager/>} />
+                            <Route path="/*" element = { <Navigate to="/" replace /> } />
+                    </Routes>
                 </main>
             <footer>
                 <Footer/>

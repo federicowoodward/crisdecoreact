@@ -24,13 +24,13 @@ export default function navBar() {
                         </Link>
                     </li>
                     <li>
-                        <Link to="/contact">
+                        <Link to="/contact/true">
                             <p href="assets/html/contacto.html">Contacto</p>
                         </Link>
                     </li>
                     <li>
-                        <Link to="/location">
-                            <p href="assets/html/ubicacion.html">Ubicación</p>
+                        <Link to="/more">
+                            <p href="assets/html/ubicacion.html" className="navSpecialItem">Mas sobre nosotros</p>
                         </Link>
                     </li>
                 </ul>

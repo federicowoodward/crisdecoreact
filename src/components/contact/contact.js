@@ -1,9 +1,12 @@
 import { useState } from 'react'; 
+import Location from '../location/location';
+import { useParams } from 'react-router-dom';
 import "./contact.css";
 export default function Contact() {
     const [customer, setCustomer] = useState({});
     const [err, setErr] = useState(false);
     const [errmessage, setErrMsg] = useState("a");
+    const showLocation = useParams();
 
     function generateCustomer(e) {
         setCustomer({
@@ -72,9 +75,10 @@ export default function Contact() {
                     </div>
                     <span>Send</span>
                     </button>
-                </div>
                     {err ? <p>{errmessage}</p> : <p></p>}
+                </div>
             </div>
+            { showLocation.showLocation && <Location />}
         </div>
     );
 }
